@@ -18,7 +18,7 @@ def register():
     fname=input("enter your name:")
     passwd=input("Create password:")
     cur=mydb.cursor() 
-    sql="insert into data (name,password) values (%s,%s) "
+    sql="insert into data (name,password) values (%s,%s)"
     val=(fname,passwd)
     cur.execute(sql,val)
     mydb.commit()
